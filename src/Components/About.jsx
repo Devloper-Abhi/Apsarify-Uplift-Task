@@ -2,7 +2,7 @@ import React from "react";
 const About = ({ darkMode }) => (
   <div
     className={
-      `min-h-screen flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
+      `min-h-screen px-3 flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
       (darkMode
         ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
         : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
@@ -17,7 +17,7 @@ const About = ({ darkMode }) => (
       >
         About <span className="animate-bounce inline-block">🎉</span>
       </h1>
-      <p className="mb-4 text-lg text-center animate-fade-in-delay">
+      <p className="mb-4 text-md text-center animate-fade-in-delay">
         UpLift Task helps people organize and achieve more in their personal and
         professional lives. Whether you're managing daily chores, tracking work
         projects, or setting personal goals, UpLift Task gives you the tools to

@@ -82,14 +82,13 @@ const Dashboard = ({ darkMode }) => {
   return (
     <div
       className={
-        `relative flex min-h-screen pt-15 transition-colors duration-300 overflow-hidden ` +
+        `relative sm:flex w-[100vw] min-h-screen pt-13 transition-colors duration-300 overflow-hidden ` +
         (darkMode
           ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
           : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
       }
       aria-label="Dashboard Background"
     >
-      {/* Animated gentle floating shapes for full background */}
       <div aria-hidden="true">
         <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
           <div
@@ -121,17 +120,17 @@ const Dashboard = ({ darkMode }) => {
       {/* Sidebar */}
       <div
         className={
-          `relative z-10 w-64 p-6 flex flex-col justify-between min-h-screen transition-colors duration-300 shadow-xl ` +
+          `relative z-10 sm:w-67 sm:min-h-screen w-screen p-6 flex flex-col justify-between h-fit transition-colors duration-300 shadow-xl ` +
           (darkMode
-            ? "bg-gray-800 text-gray-100 border-r border-gray-700"
+            ? "bg-gray-800 text-gray-100 border-r border-gray-700 "
             : "bg-white text-black border-r border-gray-200")
         }
       >
         <div>
-          <nav className="space-y-4 mt-5">
+          <nav className="space-y-4 justify-between sm:items-stretch mt-4 sm:block flex-row flex g-5">
             <Link
               className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
                 (darkMode
                   ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
                   : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
@@ -142,7 +141,7 @@ const Dashboard = ({ darkMode }) => {
             </Link>
             <Link
               className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
                 (darkMode
                   ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
                   : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
@@ -153,7 +152,7 @@ const Dashboard = ({ darkMode }) => {
             </Link>
             <Link
               className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
                 (darkMode
                   ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
                   : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
@@ -164,7 +163,7 @@ const Dashboard = ({ darkMode }) => {
             </Link>
             <Link
               className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
                 (darkMode
                   ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
                   : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
@@ -178,9 +177,9 @@ const Dashboard = ({ darkMode }) => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col items-center justify-start py-12 px-4 md:px-12 relative z-10">
+      <div className="flex-1 p-5 flex md:w-20 flex-col items-center justify-start py-12 px-4 md:px-12 relative z-10">
         {/* Welcome Back Header */}
-        <div className="w-full max-w-3xl flex items-center justify-between mb-8 animate-fade-in">
+        <div className="w-full flex items-center justify-between mb-8 animate-fade-in">
           <h1
             className={
               "text-3xl font-extrabold tracking-tight drop-shadow-lg " +
@@ -201,7 +200,7 @@ const Dashboard = ({ darkMode }) => {
         {/* Task Form */}
         <div
           className={
-            `w-full max-w-3xl p-6 rounded-2xl shadow-xl mb-8 transition-colors duration-300 animate-fade-in-delay ` +
+            `w-full p-6 rounded-2xl shadow-xl mb-8 transition-colors duration-300 animate-fade-in-delay ` +
             (darkMode
               ? "bg-gray-800 border border-gray-700"
               : "bg-white border border-gray-200")
@@ -221,7 +220,7 @@ const Dashboard = ({ darkMode }) => {
           >
             <input
               className={
-                "border-2 rounded px-2 py-1 flex-1 outline-none transition-all duration-200 " +
+                "border-2 rounded px-2 py-1 md:w-[30%] flex-1 outline-none transition-all duration-200 " +
                 (darkMode
                   ? "bg-gray-900 border-gray-700 text-gray-100 focus:border-sky-400"
                   : "bg-white border-sky-900 text-black focus:border-sky-500")
@@ -233,7 +232,7 @@ const Dashboard = ({ darkMode }) => {
             />
             <input
               className={
-                "border-2 rounded px-2 py-1 flex-1 outline-none transition-all duration-200 " +
+                "border-2 rounded px-2 md:w-[30%] py-1 flex-1 outline-none transition-all duration-200 " +
                 (darkMode
                   ? "bg-gray-900 border-gray-700 text-gray-100 focus:border-sky-400"
                   : "bg-white border-sky-900 text-black focus:border-sky-500")
@@ -245,7 +244,7 @@ const Dashboard = ({ darkMode }) => {
             />
             <select
               className={
-                "border-2 rounded px-2 py-1 cursor-pointer outline-none transition-all duration-200 " +
+                "border-2 rounded px-2 md:w-[20%] py-1 cursor-pointer outline-none transition-all duration-200 " +
                 (darkMode
                   ? "bg-gray-900 border-gray-700 text-gray-100 focus:border-sky-400"
                   : "bg-white border-sky-900 text-black focus:border-sky-500")
@@ -260,7 +259,7 @@ const Dashboard = ({ darkMode }) => {
             </select>
             <button
               className={
-                "bg-sky-700 text-white px-4 py-1 rounded shadow-md cursor-pointer transition-all duration-200 " +
+                "bg-sky-700 text-white px-4 md:w-[20%] py-1 rounded shadow-md cursor-pointer transition-all duration-200 " +
                 "hover:bg-sky-800 hover:shadow-sky-700 active:scale-95"
               }
               type="submit"
@@ -285,7 +284,7 @@ const Dashboard = ({ darkMode }) => {
         {/* Task Table */}
         <div
           className={
-            `w-full max-w-3xl p-6 rounded-2xl shadow-xl transition-colors duration-300 animate-fade-in-delay2 ` +
+            `w-full p-6 rounded-2xl shadow-xl transition-colors duration-300 animate-fade-in-delay2 ` +
             (darkMode
               ? "bg-gray-800 border border-gray-700"
               : "bg-white border border-gray-200")

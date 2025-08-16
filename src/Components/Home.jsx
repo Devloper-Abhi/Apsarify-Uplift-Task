@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 const Home = ({ darkMode }) => (
   <div
     className={
-      `relative min-h-screen flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
+      `relative min-h-screen flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden h-screen` +
       (darkMode
         ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
         : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
     }
     aria-label="Home Page Background"
   >
-    {/* Animated gentle floating shapes for full background */}
     <div aria-hidden="true">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
         <div
@@ -43,7 +42,7 @@ const Home = ({ darkMode }) => (
     <main className="relative z-10 max-w-3xl w-full flex flex-col items-center justify-center animate-fade-in">
       <h1
         className={
-          `text-5xl font-extrabold mb-8 text-center tracking-tight animate-slide-down drop-shadow-lg ` +
+          `text-3xl font-extrabold mb-2 text-center tracking-tight animate-slide-down drop-shadow-lg ` +
           (darkMode ? "text-sky-300" : "text-sky-900")
         }
       >

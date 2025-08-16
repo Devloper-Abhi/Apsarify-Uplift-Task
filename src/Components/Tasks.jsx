@@ -28,7 +28,7 @@ const Tasks = ({ darkMode }) => {
   return (
     <div
       className={
-        `relative flex min-h-screen pt-15 transition-colors duration-300 overflow-hidden ` +
+        `relative sm:flex min-h-screen pt-13 transition-colors duration-300 overflow-hidden ` +
         (darkMode
           ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
           : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
@@ -65,63 +65,64 @@ const Tasks = ({ darkMode }) => {
         </div>
       </div>
       {/* Sidebar */}
-      <div
-        className={
-          `relative z-10 w-64 p-6 flex flex-col justify-between min-h-screen transition-colors duration-300 shadow-xl ` +
-          (darkMode
-            ? "bg-gray-800 text-gray-100 border-r border-gray-700"
-            : "bg-white text-black border-r border-gray-200")
-        }
-      >
-        <div>
-          <nav className="space-y-4 mt-5">
-            <Link
+            <div
               className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium cursor-pointer " +
+                `relative z-10 sm:w-67 sm:min-h-screen w-screen p-6 flex flex-col justify-between h-fit transition-colors duration-300 shadow-xl ` +
                 (darkMode
-                  ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
-                  : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+                  ? "bg-gray-800 text-gray-100 border-r border-gray-700 "
+                  : "bg-white text-black border-r border-gray-200")
               }
-              to="/dashboard"
             >
-              <FiHome /> Dashboard
-            </Link>
-            <Link
-              className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium cursor-pointer " +
-                (darkMode
-                  ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
-                  : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
-              }
-              to="/tasks"
-            >
-              <FiList /> My Tasks
-            </Link>
-            <Link
-              className={
-                "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium cursor-pointer " +
-                (darkMode
-                  ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
-                  : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
-              }
-              to="/profile"
-            >
-              <FiUser /> Profile
-            </Link>
-          </nav>
-        </div>
-        <button
-          className={
-            "flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium cursor-pointer " +
-            (darkMode
-              ? "hover:bg-red-900 hover:text-red-300 hover:shadow-red-900 border border-transparent hover:border-red-700"
-              : "hover:bg-red-50 hover:text-red-700 hover:shadow-red-200 border border-transparent hover:border-red-400")
-          }
-        >
-          <FiLogOut /> Logout
-        </button>
-      </div>
-
+              <div>
+                <nav className="space-y-4 justify-between sm:items-stretch mt-4 sm:block flex-row flex g-5">
+                  <Link
+                    className={
+                      "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                      (darkMode
+                        ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                        : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+                    }
+                    to="/dashboard"
+                  >
+                    <FiHome /> Dashboard
+                  </Link>
+                  <Link
+                    className={
+                      "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                      (darkMode
+                        ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                        : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+                    }
+                    to="/tasks"
+                  >
+                    <FiList /> Tasks
+                  </Link>
+                  <Link
+                    className={
+                      "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                      (darkMode
+                        ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                        : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+                    }
+                    to="/profile"
+                  >
+                    <FiUser /> Profile
+                  </Link>
+                  <Link
+                    className={
+                      "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+                      (darkMode
+                        ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                        : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+                    }
+                    to="/"
+                  >
+                    <FiLogOut /> Logout
+                  </Link>
+                </nav>
+              </div>
+            </div>
+      
       {/* Main Content */}
       <div
         className={

@@ -1,14 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FiHome, FiList, FiUser, FiLogOut, FiEye } from "react-icons/fi";
 
 const Profile = ({ darkMode }) => (
   <div
     className={
-      `relative min-h-screen flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
+      `relative sm:flex min-h-screen pt-13 transition-colors duration-300 overflow-hidden ` +
       (darkMode
         ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
         : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
     }
-    aria-label="Profile Background"
+    aria-label="Tasks Background"
   >
     {/* Animated gentle floating shapes for full background */}
     <div aria-hidden="true">
@@ -39,41 +41,129 @@ const Profile = ({ darkMode }) => (
         ></div>
       </div>
     </div>
-    <div className="relative z-10 max-w-xl w-full flex flex-col items-center justify-center animate-fade-in">
-      <h1
-        className={
-          `text-4xl font-extrabold mb-6 text-center tracking-tight animate-slide-down ` +
-          (darkMode ? "text-sky-300" : "text-sky-900")
-        }
-      >
-        Profile <span className="animate-bounce inline-block">👤</span>
-      </h1>
-      <div
-        className={
-          "w-full p-6 rounded-2xl shadow transition-colors duration-300 animate-fade-in-delay " +
-          (darkMode ? "bg-gray-800" : "bg-white")
-        }
-      >
-        <div className="mb-4">
-          <span className="font-semibold">Name:</span> John Doe{" "}
-          <span className="inline-block animate-spin">🎈</span>
-        </div>
-        <div className="mb-4">
-          <span className="font-semibold">Email:</span> johndoe@email.com
-        </div>
-        <div className="mb-4">
-          <span className="font-semibold">Member Since:</span> Jan 2024
-        </div>
-        <button
-          className={
-            "bg-sky-500 text-white px-4 py-2 rounded hover:bg-sky-700 transition-colors duration-200 animate-fade-in-delay2 shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-sky-300"
-          }
-        >
-          Edit Profile
-        </button>
+    {/* Sidebar */}
+    <div
+      className={
+        `relative z-10 sm:w-67 sm:min-h-screen w-screen p-6 flex flex-col justify-between h-fit transition-colors duration-300 shadow-xl ` +
+        (darkMode
+          ? "bg-gray-800 text-gray-100 border-r border-gray-700 "
+          : "bg-white text-black border-r border-gray-200")
+      }
+    >
+      <div>
+        <nav className="space-y-4 justify-between sm:items-stretch mt-4 sm:block flex-row flex g-5">
+          <Link
+            className={
+              "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+              (darkMode
+                ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+            }
+            to="/dashboard"
+          >
+            <FiHome /> Dashboard
+          </Link>
+          <Link
+            className={
+              "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+              (darkMode
+                ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+            }
+            to="/tasks"
+          >
+            <FiList /> Tasks
+          </Link>
+          <Link
+            className={
+              "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+              (darkMode
+                ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+            }
+            to="/profile"
+          >
+            <FiUser /> Profile
+          </Link>
+          <Link
+            className={
+              "flex sm:flex-row flex-col items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 font-medium " +
+              (darkMode
+                ? "hover:bg-gray-900 hover:text-sky-300 hover:shadow-sky-900 border border-transparent hover:border-sky-700"
+                : "hover:bg-sky-50 hover:text-sky-700 hover:shadow-sky-200 border border-transparent hover:border-sky-400")
+            }
+            to="/"
+          >
+            <FiLogOut /> Logout
+          </Link>
+        </nav>
       </div>
     </div>
-    <style>{`
+
+    {/* Main Content */}
+    <div
+      className={
+        `relative z-10 flex-1 p-8 transition-colors duration-300 ` +
+        (darkMode
+          ? "bg-transparent text-gray-100"
+          : "bg-transparent text-black")
+      }
+    >
+      {/* Header */}
+      <div className="flex flex-col justify-between items-center mb-6 animate-fade-in">
+        <div className="flex w-full justify-between items-center mb-6 animate-fade-in">
+        <h1
+          className={
+            `text-3xl font-extrabold tracking-tight drop-shadow-lg ` +
+            (darkMode ? "text-sky-300" : "text-sky-900")
+          }
+        >
+          Welcome Back <span className="animate-bounce inline-block">👋</span>
+        </h1>
+        <FiUser
+          className={
+            "w-10 px-2 h-10 rounded-full border transition-all duration-200 cursor-pointer " +
+            (darkMode
+              ? "border-gray-700 hover:text-sky-300 hover:border-sky-700"
+              : "border-gray-300 hover:text-sky-700 hover:border-sky-400")
+          }
+        />
+        </div>
+        <div className="relative z-10 max-w-xl w-full flex flex-col items-center justify-center animate-fade-in">
+          <h1
+            className={
+              `text-4xl font-extrabold mb-6 text-center tracking-tight animate-slide-down ` +
+              (darkMode ? "text-sky-300" : "text-sky-900")
+            }
+          >
+            Profile <span className="animate-bounce inline-block">👤</span>
+          </h1>
+          <div
+            className={
+              "w-full p-6 rounded-2xl shadow transition-colors duration-300 animate-fade-in-delay " +
+              (darkMode ? "bg-gray-800" : "bg-white")
+            }
+          >
+            <div className="mb-4">
+              <span className="font-semibold">Name:</span> John Doe{" "}
+              <span className="inline-block animate-spin">🎈</span>
+            </div>
+            <div className="mb-4">
+              <span className="font-semibold">Email:</span> johndoe@email.com
+            </div>
+            <div className="mb-4">
+              <span className="font-semibold">Member Since:</span> Jan 2024
+            </div>
+            <button
+              className={
+                "bg-sky-500 text-white px-4 py-2 rounded hover:bg-sky-700 transition-colors duration-200 animate-fade-in-delay2 shadow-lg hover:scale-105 focus:outline-none focus:ring-4 focus:ring-sky-300"
+              }
+            >
+              Edit Profile
+            </button>
+          </div>
+        </div>
+        <style>{`
       .animate-fade-in { animation: fadeIn 1.2s cubic-bezier(.4,0,.2,1); }
       .animate-fade-in-delay { animation: fadeIn 1.8s cubic-bezier(.4,0,.2,1); }
       .animate-fade-in-delay2 { animation: fadeIn 2.4s cubic-bezier(.4,0,.2,1); }
@@ -91,6 +181,8 @@ const Profile = ({ darkMode }) => (
       @keyframes bgFloat2 { 0% { transform: translateY(0) scale(1);} 100% { transform: translateY(-30px) scale(1.04);} }
       @keyframes bgFloat3 { 0% { transform: translateY(0) scale(1);} 100% { transform: translateY(20px) scale(1.02);} }
     `}</style>
+      </div>
+    </div>
   </div>
 );
 
