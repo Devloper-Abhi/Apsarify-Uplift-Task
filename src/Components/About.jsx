@@ -2,7 +2,7 @@ import React from "react";
 const About = ({ darkMode }) => (
   <div
     className={
-      `min-h-screen px-3 flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
+      `min-h-screen flex items-center justify-center transition-colors duration-300 px-4 overflow-hidden ` +
       (darkMode
         ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
         : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")
@@ -23,7 +23,7 @@ const About = ({ darkMode }) => (
         projects, or setting personal goals, UpLift Task gives you the tools to
         make it happen.
       </p>
-      <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-center animate-fade-in-delay2">
+      <p className="max-w-2xl mx-auto dark:text-white text-center animate-fade-in-delay2">
         Our mission is to simplify productivity with a clean, intuitive
         interface — so you can spend less time managing tasks and more time
         achieving them. <span className="inline-block animate-spin">✨</span>
