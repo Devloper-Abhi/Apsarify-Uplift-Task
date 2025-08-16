@@ -19,7 +19,7 @@ const Register = ({ darkMode }) => {
   return (
     <div
       className={
-        `flex items-center justify-center min-h-[85vh] transition-colors duration-300 ` +
+        `flex items-center justify-center min-h-screen transition-colors duration-300 ` +
         (darkMode ? "bg-gray-900" : "bg-gray-50")
       }
     >
@@ -141,7 +141,7 @@ const Register = ({ darkMode }) => {
             disabled={isSubmitting}
             className={
               "bg-sky-500 w-full py-3 rounded-full text-white font-medium shadow-lg duration-300 transform transition-all " +
-              "hover:bg-white hover:text-sky-500 hover:shadow-sky-500 active:scale-95 " +
+              "hover:text-sky-500 hover:shadow-sky-500 active:scale-95 " +
               (darkMode ? "hover:bg-gray-900 hover:text-sky-400" : "")
             }
           >
