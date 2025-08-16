@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter basename="/Apsarify-Uplift-Task">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>
