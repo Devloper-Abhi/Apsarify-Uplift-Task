@@ -22,7 +22,7 @@ const featureList = [
 const Features = ({ darkMode }) => (
   <div
     className={
-      `min-h-[100vh] text-center pt-28 px-10 transition-colors duration-300 overflow-hidden ` +
+      `min-h-[100vh] text-center pt-28 pb-5 px-10 transition-colors duration-300 overflow-hidden ` +
       (darkMode
         ? "bg-gradient-to-br from-gray-900 via-sky-900 to-gray-800 text-gray-100"
         : "bg-gradient-to-br from-sky-100 via-white to-sky-200 text-black")

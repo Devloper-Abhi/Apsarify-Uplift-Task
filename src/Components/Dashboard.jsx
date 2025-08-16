@@ -301,10 +301,10 @@ const Dashboard = ({ darkMode }) => {
           <table className="w-full text-left">
             <thead>
               <tr className="border-b text-gray-600">
-                <th className="py-2">Task</th>
-                <th className="py-2">Due Date</th>
-                <th className="py-2">Status</th>
-                <th className="py-2">Actions</th>
+                <th className="py-2 px-2">Task</th>
+                <th className="py-2 px-2">Due Date</th>
+                <th className="py-2 px-2">Status</th>
+                <th className="py-2 px-2">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -320,14 +320,14 @@ const Dashboard = ({ darkMode }) => {
                   <tr
                     key={idx}
                     className={
-                      "group transition-all duration-200 cursor-pointer hover:scale-[1.01] " +
+                      "group transition-all duration-200 px-2 cursor-pointer hover:scale-[1.01] " +
                       (darkMode ? "hover:bg-gray-900" : "hover:bg-sky-50")
                     }
                   >
                     <td className="py-2 px-2">{task.title}</td>
-                    <td className="py-2">{task.due}</td>
+                    <td className="py-2 px-2">{task.due}</td>
                     <td
-                      className={`py-2 font-semibold ${
+                      className={`py-2 font-semibold px-2 ${
                         task.status === "Completed"
                           ? "text-green-500"
                           : task.status === "Pending"
@@ -337,7 +337,7 @@ const Dashboard = ({ darkMode }) => {
                     >
                       {task.status}
                     </td>
-                    <td className="py-2 flex items-center gap-2">
+                    <td className="py-2 flex items-center px-2 gap-2">
                       <button
                         className={
                           "p-2 rounded-full border transition-all duration-200 shadow-sm " +
