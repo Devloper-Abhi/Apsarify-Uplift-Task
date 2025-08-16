@@ -1,12 +1,14 @@
-# React + Vite
+# UpLift Task 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**UpLift Task** helps you organize and achieve more in your personal and professional life. Whether it's managing daily chores, tracking work projects, or setting personal goals, UpLift Task gives you the tools to make it happen.
 
-Currently, two official plugins are available:
+## 🌟 Features
+- 📝 Easy task creation and management
+- 📈 Track progress on work projects and personal goals
+- 🔑 Prioritize tasks to stay focused and productive
+- 🎯 Clean, distraction-free interface for smooth workflow
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Devloper-Abhi/Apsarify-UpLift-Task.git
